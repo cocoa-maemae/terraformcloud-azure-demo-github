@@ -1,5 +1,5 @@
 locals {
-  env = substr("${terraform.workspace}", 24, -1)
+  env = substr("${terraform.workspace}", 26, -1)
 }
 
 resource "azurerm_resource_group" "example" {

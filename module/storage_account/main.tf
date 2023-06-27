@@ -3,11 +3,11 @@ module "resource_group" {
 }
 
 locals {
-  env = substr("${terraform.workspace}", 25, -1)
+  env = substr("${terraform.workspace}", 26, -1)
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "examplestorage"
+  name                     = "teststorage${local.env}"
   resource_group_name      = module.resource_group.resource_group_name
   location                 = "japaneast"
   account_tier             = "Standard"

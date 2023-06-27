@@ -24,15 +24,19 @@ provider "azurerm" {
   #  client_secret   = var.client_secret
 }
 
-#module "resource_group" {
-#  source = "./../module/resource_group"
+module "resource_group" {
+  source = "./../module/resource_group"
+}
+
+module "storage_account" {
+  source = "./../module/storage_account"
+}
+
+#locals {
+#  env = substr("${terraform.workspace}", 26, -1)
 #}
 
-locals {
-  env = substr("${terraform.workspace}", 26, -1)
-}
-
-resource "azurerm_resource_group" "rg" {
-  name     = "example-resource-group-${local.env}"
-  location = "japaneast"
-}
+#resource "azurerm_resource_group" "example" {
+#  name     = "example-resource-group-${local.env}"
+#  location = "japaneast"
+#}

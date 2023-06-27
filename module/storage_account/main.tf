@@ -3,7 +3,7 @@ module "resource_group" {
 }
 
 locals {
-  env = substr("${terraform.workspace}", 24, -1)
+  env = substr("${terraform.workspace}", 25, -1)
 }
 
 resource "azurerm_storage_account" "example" {

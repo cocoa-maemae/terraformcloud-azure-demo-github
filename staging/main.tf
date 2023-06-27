@@ -1,10 +1,10 @@
 terraform {
-  #required_providers {
-  #  azurerm = {
-  #    source  = "hashicorp/azurerm"
-  #    version = "~> 3.0.2"
-  #  }
-  #}
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.25.0"
+    }
+  }
   cloud {
     organization = "tmaeda-hashicorp"
     hostname     = "app.terraform.io"

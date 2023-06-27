@@ -7,7 +7,7 @@ locals {
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "example-storage-account-${local.env}"
+  name                     = "example-storage-${local.env}"
   resource_group_name      = module.resource_group.resource_group_name
   location                 = "japaneast"
   account_tier             = "Standard"

@@ -10,17 +10,19 @@ terraform {
     hostname     = "app.terraform.io"
 
     workspaces {
-      name = "terraformcloud-azure-demo-staging"
+      name = "terraformcloud-azure-demo-github"
     }
   }
 }
-provider "azurerm" {
-  features {}
-  subscription_id = var.subscription_id
-  tenant_id       = var.tenant_id
-  client_id       = var.client_id
-  client_secret   = var.client_secret
-}
+
+# general credentials setting
+#provider "azurerm" {
+#  features {}
+#  subscription_id = var.subscription_id
+#  tenant_id       = var.tenant_id
+#  client_id       = var.client_id
+#  client_secret   = var.client_secret
+#}
 
 #module "resource_group" {
 #  source = "./../module/resource_group"
